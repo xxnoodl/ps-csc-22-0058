@@ -1,0 +1,717 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-entity camera look-controls position="0 2 5" rotation="0 -30 0"></a-entity>
+        <a-sky material="src:sky.jpg "></a-sky>
+        
+        <a-assets>
+            <img id="gateDiff" src="wooden_gate_diff_1k.jpg">
+            <img id="gateDisp" src="wooden_gate_disp_1k.png">
+        </a-assets>
+
+        <a-plane color="white" height="5" width="5" rotation="-90 0 0" geometry="primitive: circle" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-ffffff, #ffffff);" scale="2.09037 2.09037 2.09037"
+        material="src:wooden_gate_diff_1k.jpg"></a-plane>
+
+        <!-- whole table -->
+        <a-entity
+        id="table setup"
+        scale="0.5721 1.08247 1">
+                <!-- table slab -->
+            <a-entity
+            id="box array"
+            shadow="cast:true; receive: true"
+            position="0 0.4 0"
+            scale="1.5 2 2">
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.04"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.08"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.12"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.16"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.20"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.24"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.28"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.32"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.36"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.40"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.44"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.48"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.52"></a-box>
+                
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.56"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.60"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.64"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.68"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.72"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.76"></a-box>
+                
+            </a-entity>
+
+            <!-- table legs -->
+            <a-entity
+            id="table legs"
+            shadow="cast:true; receive:true"
+            position="0 0 0">
+
+                <!-- top right -->
+                <a-box
+                id = "top right"
+                color="#4d3020"
+                position="1.2 0.2 0.15"
+                scale="0.2 0.4 0.2"></a-box>
+
+                
+                <!-- top left -->
+                <a-box
+                id = "top left"
+                color="#4d3020"
+                position="-1.2 0.2 0.15"
+                scale="0.2 0.4 0.2"></a-box>
+
+                
+                <!-- bottom right -->
+                <a-box
+                id = "bottom right"
+                color="#4d3020"
+                position="-1.2 0.2 1.37"
+                scale="0.2 0.4 0.2"></a-box>
+
+                
+                <!-- bottom left -->
+                <a-box
+                id = "bottom left"
+                color="#4d3020"
+                position="1.2 0.2 1.37"
+                scale="0.2 0.4 0.2"></a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- lamp -->
+        <a-entity id="lamp" position="-1.14132 0 0.433">
+        
+        <a-cylinder id="lamp-cylinder" material="opacity: 0.49" geometry="radius: 0.7" position="1.0764 0.60274 0.42447" scale="0.16954 0.16954 0.16954"></a-cylinder>
+
+        <!-- ring one -->
+        <a-torus rotation="90 0 0" geometry="radius: 2.56" position="1.07727 0.66513 0.42799" scale="0.05507 0.05507 0.05507" material="color: #d92626; emissive: #d92626; emissiveIntensity: 0.31"></a-torus>
+
+        <!-- ring two -->
+        <a-torus rotation="90 0 0" geometry="radius: 2.56" position="1.07727 0.6 0.42799" scale="0.05507 0.05507 0.05507" material="color: #d92626; emissive: #d92626; emissiveIntensity: 0.31"></a-torus>
+
+        <!-- ring three -->
+        <a-torus rotation="90 0 0" geometry="radius: 2.56" position="1.07727 0.53 0.42799" scale="0.05507 0.05507 0.05507" material="color: #d92626; emissive: #d92626; emissiveIntensity: 0.31"></a-torus>
+
+        <a-icosahedron radius:="" 0.1="" position="1.08005 0.60239 0.4372" scale="0.15 0.15 0.15" material="opacity: 0.35; emissive: #5e75e8; emissiveIntensity: 19.87"></a-icosahedron>
+
+        
+        <!-- Actual light to illuminate the scene -->
+        <a-light type="point" color="#e46b1b" intensity="1.29" distance="0.96" position="1.08 0.6 0.44" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-e46b1b, #ffd331);" light="distance: 0.7; intensity: 12">
+        </a-light>
+
+        </a-entity>
+
+        <!-- chair 1 -->
+        <a-entity
+        id="chair setup 1"
+        position="-0.2 0.350 -0.3">
+        
+        <a-entity
+            id="chair box array"
+            shadow="cast:true; receive: true"
+            rotation="0 90 0"
+            scale="0.20716 0.93996 0.92434">
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.04"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.08"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.12"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.16"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.20"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.24"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.28"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.32"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.36"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.40"></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                position="0 0 0.44"></a-box>
+
+                
+            </a-entity>
+
+            <a-entity
+            id="chair 1 legs">
+
+                <!-- <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box> -->
+                <a-entity
+                id="table bracket front">
+                    <a-box
+                    color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="-0.01432 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="0.43578 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.50137 -0.05 -0.02964"
+                    position="0.21161 -0.01293 -0.15266"></a-box>
+                
+                </a-entity>
+
+                    <a-entity
+                id="table bracket back"
+                position="0 0 0.30872">
+                    <a-box
+                    color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="-0.01432 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="0.43578 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.50137 -0.05 -0.02964"
+                    position="0.21161 -0.01293 -0.15266"></a-box>
+                
+                </a-entity>
+
+                <a-box color="#4d3020"
+                scale="0.3245 -0.05 -0.02964"
+                position="-0.00534 -0.3218 -0.00308"
+                rotation="0 90 0"></a-box>
+
+
+                <a-box color="#4d3020"
+                scale="0.3245 -0.05 -0.02964"
+                position="0.43786 -0.3218 0.00426"
+                rotation="0 90 0"></a-box>
+                
+        
+            </a-entity>
+    
+        </a-entity>
+
+
+        <!-- chair 2 -->
+        <a-entity
+        id="chair setup 2"
+        position="-0.2 0.35 1.80417">
+        
+            <a-entity
+                id="chair box array"
+                shadow="cast:true; receive: true"
+                rotation="0 90 0"
+                scale="0.20716 0.93996 0.92434">
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    postion="0 0 0"
+                    ></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.04"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.08"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.12"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.16"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.20"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.24"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.28"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.32"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.36"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.40"></a-box>
+
+                    <a-box
+                    color="#4d3020"
+                    scale="2 -0.05 -0.025"
+                    position="0 0 0.44"></a-box>
+
+                    
+                </a-entity>
+
+            <a-entity
+            id="chair 1 legs">
+
+                <!-- <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box>
+
+                <a-box
+                color="#4d3020"
+                scale="2 -0.05 -0.025"
+                postion="0 0 0"
+                ></a-box> -->
+                <a-entity
+                id="table bracket front">
+                    <a-box
+                    color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="-0.01432 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="0.43578 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.50137 -0.05 -0.02964"
+                    position="0.21161 -0.01293 -0.15266"></a-box>
+                
+                </a-entity>
+
+                    <a-entity
+                id="table bracket back"
+                position="0 0 0.30872">
+                    <a-box
+                    color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="-0.01432 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.32267 -0.05 -0.025"
+                    rotation="0 0 90"
+                    position="0.43578 -0.18365 -0.15266"></a-box>
+
+                    <a-box color="#4d3020"
+                    scale="0.50137 -0.05 -0.02964"
+                    position="0.21161 -0.01293 -0.15266"></a-box>
+                
+                </a-entity>
+
+                <a-box color="#4d3020"
+                scale="0.3245 -0.05 -0.02964"
+                position="-0.00534 -0.3218 -0.00308"
+                rotation="0 90 0"></a-box>
+
+
+                <a-box color="#4d3020"
+                scale="0.3245 -0.05 -0.02964"
+                position="0.43786 -0.3218 0.00426"
+                rotation="0 90 0"></a-box>
+                
+        
+            </a-entity>
+    
+        </a-entity>
+
+        <!-- milo and milk-->
+    <a-entity
+    position="0 -0.56522 0.28562">
+        <a-entity id="tins" position="0 1.15 0">
+
+            <!-- tin of Milo (body)-->
+            <a-cylinder
+            position="0.18268 -0.01768 0"
+            scale="0.5572 0.5572 0.5572"
+            radius="0.15"
+            height="0.3"
+            material="src:milo.jpeg; metalness: 0.72"
+            open-ended="true"
+            shadow="cast:true"></a-cylinder>
+
+            <a-circle
+            position="0.18268 0.06417 0"
+            rotation="-90 180 0"
+            scale="0.5572 0.5572 0.5572"
+            radius="0.15"
+            material="src:milo-top.jpg"
+            shadow="cast:true"></a-cylinder>></a-circle>
+
+            <!-- tin of Milk -->
+            <a-cylinder
+            position="0.35637 -0.05747 0"
+            radius="0.15" 
+            scale="0.28816 0.28816 0.28816"
+            radius="0.15"
+            height="0.3"
+            material="src:milk.jpeg"
+            open-ended="true"
+            shadow="cast:true"></a-cylinder>
+
+            <a-circle
+            scale="0.28816 0.28816 0.28816"
+            position="0.35614 -0.01418 0.00224"
+            rotation="-90 0 0"
+            radius="0.15"
+            material="metalness:1; anisotropy: 8.37"
+            shadow="cast:true"></a-circle>
+            
+        </a-entity>
+    </a-entity>
+
+    <!-- coffee mug 1 -->
+        <a-entity
+        position="0.45252 0.54279 1.22257"
+        scale="0.72641 0.72641 0.72641"
+        rotation="0 -14.360000000000001 0">
+            <a-cylinder
+            position="0 0 0.25"
+            radius="0.1"
+            height="0.15"
+            color="#d93f3f"
+            shadow="cast:true"
+            depth="3"
+            open-ended="true"></a-cylinder>
+
+            <!-- tea 1 -->
+            <a-cylinder
+            position="0 0.03906 0.25"
+            radius="0.1"
+            height="0.15"
+            material="transparent: true; color: #3f240d"
+            scale="0.89743 0.37806 0.89743"
+            shadow="cast:true"></a-cylinder>
+
+            <a-cylinder position="0 -0.07112 0.2581" radius="0.1" height="0.15" material="transparent: true; color: #585755" scale="1.48031 -0.05437 1.47498" shadow="" geometry="segmentsRadial: 50"></a-cylinder>
+
+            <!-- mug handle 1 -->
+            <a-torus
+            position="0.1 0 0.25"
+            scale="0.646 0.646 0.646"
+            radius="0.070"
+            radius-tubular="0.010"
+            color="#d93f3f"
+            shadow="cast:true"></a-torus>
+
+        </a-entity>
+
+    <!-- coffee mug 2 -->
+        <a-entity
+        position="-0.15415 0.54365 0.31244"
+        scale="0.72641 0.72641 0.72641"
+        rotation="0 158.98547490849108 0">
+            <a-cylinder
+            position="0 0 0.25"
+            radius="0.1"
+            height="0.15"
+            color="#7dd9c7"
+            open-ended="true"
+            shadow="cast:true"></a-cylinder>
+
+            <!-- tea 2 -->
+            <a-cylinder
+            position="-0.00135 -0.0002 0.24691"
+            scale="0.92468 0.92468 0.92468"
+            radius="0.1"
+            height="0.15"
+            material="transparent: true; color: #3f240d"
+            shadow="cast:true"></a-cylinder>
+
+            <a-cylinder position="0 -0.07112 0.2581" radius="0.1" height="0.15" material="transparent: true; color: #585755" scale="1.48031 -0.05437 1.47498" shadow="" geometry="segmentsRadial: 50"></a-cylinder>
+            
+
+
+            <!-- mug handle 2 -->
+            <a-torus
+            position="0.1 0 0.25"
+            scale="0.646 0.646 0.646"
+            radius="0.070"
+            radius-tubular="0.010"
+            color="#7dd9c7"
+            shadow="cast:true"></a-torus>
+
+        </a-entity>
+
+        <!-- books -->
+
+        <a-entity
+        position="0 -0.02252 0">
+            <a-box
+            position="-0.17373 0.52651 1.28823"
+            scale="0.35501 0.0298 0.26378"
+            rotation="0 81.19 0"
+            material="src: book1"></a-box>
+
+            <a-box
+            position="-0.21487 0.55345 1.28185"
+            scale="0.36408 0.03056 0.27052"
+            rotation="0 100.52773698688345 0"
+            material="src:book2"></a-box>
+        </a-entity>
+
+
+        <!-- tall lamp stand -->
+
+        <a-entity>
+            <a-cylinder scale="0.18993 0.15565 0.18993" position="1.04551 0.6432 0.28797" material="opacity: 0.74; color: #e3e4c9; emissive: #e3cece; emissiveIntensity: 8.7"></a-cylinder>
+
+
+            <a-cylinder scale="0.18993 0.15565 0.18993" position="1.04551 0.6432 0.28797" material="opacity: 0.74; color: #e3e4c9; emissive: #e3cece; emissiveIntensity: 8.7"></a-cylinder>
+
+
+            <a-cylinder scale="0.02963 -0.5254 0.02963" position="1.04551 0.25228 0.28797" material="metalness: 0.92"></a-cylinder>
+        </a-entity>
+
+        <!-- cute refrigerator -->
+<a-entity id="fridge" position="0.91462 0 -0.69981" scale="0.66054 0.41674 0.66054" rotation="0 -13.882767376019846 0">
+    <!-- body -->
+    <a-box width="0.9" height="1.6" depth="0.8" color="#e8f0ff" shadow="" material="metalness: 0.1; roughness: 0.35" position="0 0.8 -0.29711" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-e8f0ff, #ffffff);">
+    </a-box>
+
+    <!-- top door -->
+    <a-box width="0.9" height="0.75" depth="0.05" color="#ffffff" position="0 1.23 0.13733" shadow="" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-ffffff, #ffffff);">
+    </a-box>
+
+    <!-- bottom door -->
+    <a-box width="0.9" height="0.75" depth="0.05" color="#ffffff" position="0 0.38 0.13862" shadow="" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-ffffff, #ffffff);" scale="1.00959 1 1">
+    </a-box>
+
+    <!-- handle top -->
+    <a-cylinder height="0.45" radius="0.03" color="#c6cad6" rotation="0 0 90" position="0.29741 0.91734 0.18062" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-c6cad6, #ffffff);" scale="1 0.2962 1">
+    </a-cylinder>
+
+    <!-- handle bottom -->
+    <a-cylinder height="0.45" radius="0.03" color="#c6cad6" rotation="0 0 90" position="0.29613 0.68635 0.17495" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-c6cad6, #ffffff);" scale="1 0.28952 1">
+    </a-cylinder>
+
+    <!-- cute eyes -->
+    <a-sphere color="#000" radius="0.04" position="-0.15 1.45 0.19015" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-000000, #ffffff);"></a-sphere>
+    <a-sphere color="#000" radius="0.04" position="0.15 1.45 0.18613" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-000000, #ffffff);"></a-sphere>
+
+    <!-- little smile -->
+    <a-cylinder radius="0.08" height="0.02" color="#000" rotation="90 0 0" position="0 1.34 0.1854" material="opacity: 0.7" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-000000, #ffffff);">
+    </a-cylinder>
+</a-entity>
+
+
+<a-entity
+id="floor carpet">
+    <a-plane
+    
+    color="blue"></a-plane>
+</a-entity>
+
+<a-entity id="rim light" light="color: #f07a7a; decay: 2.5; intensity: 4.88; penumbra: 1; type: spot" position="1.13901 1.085 -0.39828" rotation="-11.12225671907954 136.22217 114.87058947239335"></a-entity>
+<a-entity id="rim light-2" light="color: #7a78e8; decay: 2.5; intensity: 20; penumbra: 1; type: spot" position="-0.45845 1.085 -0.61045" rotation="-37.8387057482347 -60.15140116401435 -7.368810203177517"></a-entity>
+
+
+<a-cylinder scale="0.18993 0.15565 0.18993" position="1.04551 0.6432 0.28797" material="opacity: 0.74; color: #e3e4c9; emissive: #e3cece; emissiveIntensity: 8.7"></a-cylinder>
+
+<a-entity id="light-2" light="color: #7a78e8; decay: 2.5; intensity: 20; penumbra: 1; type: spot" position="0.58276 1.085 0.95835" rotation="-37.8387057482347 119.99999999999999 -7.368810203177517"></a-entity>
+
+<a-entity id="light-2" light="color: #7a78e8; decay: 2.5; intensity: 20; penumbra: 1; type: spot" position="0.58276 1.085 0.95835" rotation="-37.8387057482347 119.99999999999999 -7.368810203177517"></a-entity>
+
+<a-entity id="marker-board" position="-0.1668 0 -1.00391" scale="0.28067 0.51703 0.40526" rotation="0 -1.6913714112261902 0">
+
+    <!-- Board Surface -->
+    <a-plane material="src:istockphoto-1171577912-612x612.jpg" width="2" height="1.2" color="#ffffff" position="0 1.4 0" material="roughness: 0.8" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-ffffff, #ffffff);">
+    </a-plane>
+
+    <!-- Frame (thin wooden edges around surface) -->
+    <a-box width="2.04" height="0.05" depth="0.05" color="#5a3e1b" position="0 2.02 -0.00124" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-5a3e1b, #ffffff);"></a-box> <!-- top -->
+    <a-box width="2.04" height="0.05" depth="0.05" color="#5a3e1b" position="0 0.78 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-5a3e1b, #ffffff);"></a-box> <!-- bottom -->
+    <a-box width="0.05" height="1.24" depth="0.05" color="#5a3e1b" position="-1.02 1.4 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-5a3e1b, #ffffff);"></a-box> <!-- left -->
+    <a-box width="0.05" height="1.24" depth="0.05" color="#5a3e1b" position="1.02 1.4 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-5a3e1b, #ffffff);"></a-box> <!-- right -->
+
+    <!-- Left Leg -->
+    <a-box width="0.1" height="1.6" depth="0.1" color="#4e4e4e" position="-0.8 0.55 -0.12881" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+    <!-- Right Leg -->
+    <a-box width="0.1" height="1.6" depth="0.1" color="#4e4e4e" position="0.8 0.55 -0.05863" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+    <!-- Rear Support Leg -->
+    <a-box width="0.1" height="1.5" depth="0.1" color="#4e4e4e" position="0.00439 0.60508 -0.34839" rotation="-10 0 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+    <!-- Cross Bar Between Front Legs -->
+    <a-box width="1.6" height="0.1" depth="0.1" color="#4e4e4e" position="0 0 -0.25" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+    <!-- Braces: front to rear support -->
+    <a-box width="0.08" height="1" depth="0.08" color="#4e4e4e" position="-0.40844 0.6434 -0.2864" rotation="25 0 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+    <a-box width="0.08" height="1" depth="0.08" color="#4e4e4e" position="0.40877 0.47048 -0.3557" rotation="25 0 0" data-darkreader-inline-color="" style="--darkreader-inline-color: var(--darkreader-text-4e4e4e, #ffffff);"></a-box>
+
+</a-entity>
+
+
+<a-entity camera="far: 9994.42; near: 1.565; zoom: 0.41" position="-1.15871 1.01313 4.24182" rotation="-9.82 -45 0" scale="0.83784 0.83784 0.83784"></a-entity>
+
+
+
+</body>
+</html>
